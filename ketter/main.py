@@ -88,7 +88,7 @@ class Ketter:
                     param1, param2 = self._mc_converter(mc)
                     # convert_time = time.time() - analyze_time - start_time
 
-                    data = itertools.islice(self._data, 0, len(x))
+                    data = list(itertools.islice(self._data, 0, len(x)))
                     converted = self._synthe.synthesize(data, f0, ap, param1, param2)
                     # finish_time = time.time() - convert_time - start_time
                     # sys.stdout.write("\r %f: %f: %f: %f" % (1., analyze_time,
