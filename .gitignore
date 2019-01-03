@@ -102,3 +102,25 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+
+# Use by virtualenv
+Scripts
+Scripts/**
+Include
+Include/**
+Lib
+Lib/**
+tcl
+tcl/**
+openVSCode.bat
+share
+share/**
+
+# Visual Studio Code
+.vscode
+.vscode/**
+
+# Temporaly
+portaudio_x64.dll
+snap
