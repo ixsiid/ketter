@@ -2,10 +2,10 @@
     aaa
 """
 
-from player import Player
-from recorder import Recorder
-from analysis import Analysis
-from synthesizer import Synthesizer
+from .player import Player
+from .recorder import Recorder
+from .analysis import Analysis
+from .synthesizer import Synthesizer
 
 import time
 import numpy as np
