@@ -77,7 +77,7 @@ class Ketter:
                 if count >= self._processing_block_count:
                     count = 0
                     # start_time = time.time()
-                    f0, _, ap, mc = self._analyze.analyze(np.array(self._data))
+                    f0, ap, _, mc = self._analyze.analyze(np.array(self._data))
                     f0 = f0[synthe_start_frame:synthe_end_frame]
                     # sp = sp[synthe_start_frame:synthe_end_frame]
                     ap = ap[synthe_start_frame:synthe_end_frame]

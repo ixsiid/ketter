@@ -45,8 +45,8 @@ class Analysis:
                                      f0_floor=self.f0min, f0_ceil=self.f0max,
                                      frame_period=self.period)
         f0 = pyworld.stonemask(data, _f0, time_axis, self.fs)
-        sp = pyworld.cheaptrick(data, f0, time_axis, self.fs, fft_size=self.fft_size)
         ap = pyworld.d4c(data, f0, time_axis, self.fs, fft_size=self.fft_size)
+        sp = pyworld.cheaptrick(data, f0, time_axis, self.fs, fft_size=self.fft_size)
         mcep = pysptk.sp2mc(sp, order=self.mcep_order, alpha=self.mcep_alpha)
 
-        return f0, sp, ap, mcep
+        return f0, ap, sp, mcep
